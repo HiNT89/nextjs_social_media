@@ -8,8 +8,8 @@ import { validateForm } from "@/utils";
 export default function LoginPage() {
   const { login } = useAuth();
   const [formInput, setFormInput] = useState({
-    username: "hint1",
-    password: "123",
+    username: "",
+    password: "",
   });
   const [isDisable, setIsDisable] = useState(true);
   useEffect(() => {

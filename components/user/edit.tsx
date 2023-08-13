@@ -49,7 +49,7 @@ export default function EditUser(props: EditUserProps) {
   const handleSubmit = () => {
     const regexPhoneNumber = /(84|0[3|5|7|8|9])+([0-9]{8})\b/g;
     const regexEmail =
-      /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/gm;
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     const checkPhoneNumber = formInput.phoneNumber.match(regexPhoneNumber);
     const checkEmail = formInput.email.match(regexEmail);
     if (!checkPhoneNumber) {
